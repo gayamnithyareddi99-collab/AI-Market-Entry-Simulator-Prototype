@@ -300,8 +300,191 @@ p{color:var(--tx3);line-height:1.8;font-size:.875rem}a{text-decoration:none;colo
 .msucc-ic{width:60px;height:60px;border-radius:50%;background:var(--okl);border:2px solid var(--okb);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;color:var(--ok)}
 .msucc-ic svg{width:26px;height:26px}
 .mref{display:inline-flex;padding:4px 13px;border-radius:20px;background:var(--bg2);border:1px solid var(--br2);font-family:var(--fm);font-size:.62rem;color:var(--tx3);margin-top:12px}
-@media(max-width:900px){.sidebar{display:none}.main{margin-left:0}.mtop{display:flex}.footer{display:block}.mi{padding:72px 18px 24px}.g4{grid-template-columns:1fr 1fr}.g3{grid-template-columns:1fr 1fr}.g2{grid-template-columns:1fr}.g32,.g23{grid-template-columns:1fr}.kpi-g{grid-template-columns:repeat(3,1fr)}.frow{grid-template-columns:1fr}.swot{grid-template-columns:1fr}.hero{padding:28px 22px}.hero-img{display:none}.f-main{grid-template-columns:1fr 1fr;gap:28px;padding:32px 18px 28px}.f-cta-band{padding:26px 18px}.f-cta-inner{flex-direction:column;gap:18px}.f-bottom{grid-template-columns:1fr;gap:14px;padding:16px 18px 22px;text-align:center}.f-legal{justify-content:center;flex-wrap:wrap;gap:14px}.f-soc{justify-content:center}.ai-metric-row{grid-template-columns:1fr 1fr}}
-@media(max-width:480px){.g4,.g3{grid-template-columns:1fr}.kpi-g{grid-template-columns:1fr 1fr}.f-main{grid-template-columns:1fr;gap:22px;padding:26px 16px 22px}.ai-metric-row{grid-template-columns:1fr}}
+/* ═══ MOBILE — 900px BREAKPOINT (tablet + phone) ═══════════════════════ */
+@media(max-width:900px){
+  /* layout */
+  .sidebar{display:none}
+  .main{margin-left:0}
+  .mtop{display:flex}
+  .footer{display:block}
+  .mi{padding:72px 16px 28px}
+
+  /* grids → stack or 2-col */
+  .g4{grid-template-columns:1fr 1fr;gap:12px}
+  .g3{grid-template-columns:1fr 1fr;gap:14px}
+  .g2{grid-template-columns:1fr;gap:16px}
+  .g32,.g23{grid-template-columns:1fr;gap:16px}
+  .kpi-g{grid-template-columns:repeat(3,1fr);gap:8px}
+  .frow{grid-template-columns:1fr}
+  .swot{grid-template-columns:1fr}
+
+  /* hero */
+  .hero{padding:26px 18px 22px;margin-bottom:16px;border-radius:16px}
+  .hero-img{display:none}
+  .hero-title{font-size:clamp(1.25rem,5vw,1.7rem)}
+  .hero-sub{font-size:.8rem}
+  .hero-stats{gap:16px;flex-wrap:wrap}
+  .hero-btns{flex-direction:column;gap:9px}
+  .hbp,.hbs{width:100%;text-align:center;padding:12px 16px}
+
+  /* KPI strip */
+  .kpi{padding:14px 16px;border-radius:14px}
+  .kpi-g{grid-template-columns:repeat(3,1fr)}
+  .kpi-v{font-size:1.05rem}
+  .kpi-l{font-size:.38rem}
+
+  /* stat cards */
+  .sv{font-size:clamp(1.3rem,5vw,2rem)}
+  .sc{padding:16px 12px}
+
+  /* chart panels */
+  .cp{padding:14px 12px}
+  .cw{height:160px}
+  .cw.t{height:200px}
+  .cw.xt{height:240px}
+
+  /* section headers */
+  .stitle{font-size:clamp(1.1rem,4.5vw,1.45rem)}
+  .ssub{font-size:.8rem}
+
+  /* banners */
+  .pbanner{height:130px;border-radius:14px}
+  .pbanner-c{padding:0 20px}
+  .pbanner-c h2{font-size:1.05rem}
+
+  /* cards */
+  .card{padding:16px}
+  .card-nv,.card-dk{padding:16px}
+
+  /* pricing */
+  .g3.pricing-wrap{grid-template-columns:1fr}
+  .price-card{padding:22px 18px}
+  .price-val{font-size:1.8rem}
+
+  /* progress bars */
+  .pi{margin-bottom:10px}
+
+  /* tables — horizontal scroll */
+  .ftable-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;width:100%}
+  .ftable{min-width:500px;font-size:.72rem}
+  .ftable th,.ftable td{padding:8px 10px}
+
+  /* timeline */
+  .tl{padding-left:18px}
+  .tl-dot{width:11px;height:11px;left:-18px}
+  .tl-title{font-size:.82rem}
+  .tl-desc{font-size:.72rem}
+
+  /* activity feed */
+  .af{gap:5px}
+  .ai-item{padding:8px 10px}
+  .am{font-size:.69rem}
+
+  /* forms */
+  .dfw{padding:20px 16px;border-radius:16px}
+  .df-title{font-size:.95rem}
+  .fi,.fsel,.fta{font-size:.8rem;padding:9px 11px}
+  .dsub{font-size:.8rem;padding:11px}
+
+  /* AI result panel */
+  .ai-res{padding:20px 16px;border-radius:16px}
+  .ai-res-body{font-size:.78rem}
+  .ai-metric-row{grid-template-columns:1fr 1fr;gap:10px}
+  .ai-metric{padding:12px 10px}
+  .ai-metric-v{font-size:1.1rem}
+
+  /* contact cards */
+  .cc{padding:16px;gap:12px}
+  .cc-val{font-size:.82rem}
+
+  /* FAQ */
+  .faq-qt{font-size:.78rem}
+  .faq-a{font-size:.75rem}
+
+  /* modal */
+  .mbox{width:min(520px,96vw);max-height:92vh}
+  .mbody{padding:18px 18px 0}
+  .mhdr{padding:18px 18px 14px}
+
+  /* footer */
+  .f-main{grid-template-columns:1fr 1fr;gap:24px;padding:28px 16px 22px}
+  .f-cta-band{padding:22px 16px}
+  .f-cta-inner{flex-direction:column;gap:16px}
+  .f-cta-headline{font-size:1.05rem}
+  .f-bottom{grid-template-columns:1fr;gap:12px;padding:14px 16px 20px;text-align:center}
+  .f-legal{justify-content:center;flex-wrap:wrap;gap:12px}
+  .f-soc{justify-content:center}
+  .f-desc{font-size:.75rem}
+
+  /* R&D grid inside technology page */
+  .rd-grid-inner{grid-template-columns:1fr 1fr !important;gap:10px !important}
+
+  /* founder profile */
+  .founder-row{flex-direction:column;gap:12px}
+
+  /* toast */
+  .toast{min-width:calc(100vw - 32px);right:16px;bottom:16px;max-width:calc(100vw - 32px)}
+
+  /* SWOT */
+  .sw-q{padding:16px}
+}
+
+/* ═══ SMALL PHONES — 480px ═══════════════════════════════════════════════ */
+@media(max-width:480px){
+  .mi{padding:64px 12px 24px}
+  .g4{grid-template-columns:1fr}
+  .g3{grid-template-columns:1fr}
+  .g2{grid-template-columns:1fr}
+  .kpi-g{grid-template-columns:repeat(2,1fr)}
+  .hero-stats{gap:12px}
+  .hero{padding:20px 14px 18px}
+  .hero-title{font-size:clamp(1.1rem,6vw,1.4rem)}
+  .kpi-v{font-size:.95rem}
+  .sv{font-size:clamp(1.2rem,6vw,1.7rem)}
+  .stitle{font-size:clamp(1rem,5vw,1.25rem)}
+  .f-main{grid-template-columns:1fr;gap:18px;padding:22px 12px 18px}
+  .ai-metric-row{grid-template-columns:1fr}
+  .pbanner{height:110px}
+  .pbanner-c h2{font-size:.92rem}
+  .price-card{padding:18px 14px}
+  .mbox{width:calc(100vw - 16px)}
+  .dfw{padding:16px 12px;border-radius:12px}
+  .cp{padding:12px 10px}
+  .cw{height:145px}
+  .cw.t{height:185px}
+  .cw.xt{height:215px}
+  .card{padding:14px}
+  .cc{padding:14px;gap:10px}
+  .toast{right:8px;bottom:8px;min-width:calc(100vw - 16px)}
+}
+/* ── Pricing grid: 1-col on mobile ─────────────────────────── */
+@media(max-width:900px){
+  #pricing-grid{grid-template-columns:1fr !important}
+}
+/* ── RD 4-phase grid: 2-col on mobile ──────────────────────── */
+@media(max-width:900px){
+  [style*="grid-template-columns:repeat(4,1fr)"]{
+    grid-template-columns:repeat(2,1fr) !important;
+    gap:10px !important
+  }
+}
+/* ── Founder profile image row ──────────────────────────────── */
+@media(max-width:900px){
+  .card-nv [style*="display:flex;align-items:center;gap:18px"]{
+    flex-direction:column;align-items:flex-start !important;gap:12px !important
+  }
+}
+/* ── Section action buttons ─────────────────────────────────── */
+@media(max-width:900px){
+  .sa{flex-direction:column;width:100%}
+  .sa .bp,.sa .bs{width:100%;text-align:center}
+  .sh-row{flex-direction:column;gap:10px}
+}
+/* ── Prevent body overflow ──────────────────────────────────── */
+@media(max-width:900px){
+  body{overflow-x:hidden}
+  .layout,.main,.mi,.page{max-width:100vw;overflow-x:hidden}
+}
 </style>
 </head>
 <body>
@@ -609,7 +792,7 @@ p{color:var(--tx3);line-height:1.8;font-size:.875rem}a{text-decoration:none;colo
     <div class="sbadge ok">Business Model</div>
     <div class="sh-row"><div><div class="stitle">Business Model &amp; Pricing</div><div class="ssub">A multi-revenue stream SaaS model  tiered subscriptions scaled alongside operator expansion volume, plus Strategic Integration Setup (£600/site) and Strategic Equity Audits (£500).</div></div></div>
   </div>
-  <div class="g3 ain" style="margin-bottom:24px">
+  <div class="g3 ain" style="margin-bottom:24px" id="pricing-grid">
     <div class="price-card">
       <div class="price-name">Starter Plan</div>
       <div class="price-val">£50<span>/month</span></div>
@@ -674,7 +857,7 @@ p{color:var(--tx3);line-height:1.8;font-size:.875rem}a{text-decoration:none;colo
     <div class="cp"><div class="cp-h"><div class="cp-t">Feature Comparison Radar</div><div class="cp-s">AI Simulator vs Key Competitors</div></div><div class="cw xt"><canvas id="c-compradar"></canvas></div></div>
     <div class="cp"><div class="cp-h"><div class="cp-t">Market Positioning Map</div><div class="cp-s">SME Focus vs Predictive Capability</div></div><div class="cw xt"><canvas id="c-positioning"></canvas></div></div>
   </div>
-  <div class="ain" style="margin-bottom:20px;overflow-x:auto">
+  <div class="ain ftable-wrap" style="margin-bottom:20px">
     <table class="ftable">
       <thead><tr><th>Feature / Capability</th><th>Enterprise Platforms</th><th>Niche B2B Tools</th><th>General LLMs / Excel</th><th style="background:linear-gradient(135deg,var(--b2),var(--b3))">AI Strategy Simulator</th></tr></thead>
       <tbody>
@@ -732,7 +915,7 @@ p{color:var(--tx3);line-height:1.8;font-size:.875rem}a{text-decoration:none;colo
   </div>
   <div class="card card-nv ain">
     <h3 style="margin-bottom:14px">Financial Analysis &amp; Key Ratios</h3>
-    <div style="overflow-x:auto"><table class="ftable" style="min-width:500px"><thead><tr><th>Metric</th><th>Year 1</th><th>Year 2</th><th>Year 3</th></tr></thead><tbody>
+    <div class="ftable-wrap"><table class="ftable" style="min-width:500px"><thead><tr><th>Metric</th><th>Year 1</th><th>Year 2</th><th>Year 3</th></tr></thead><tbody>
       <tr><td>Projected Revenue</td><td>£60,300</td><td>£304,950</td><td>£616,200</td></tr>
       <tr><td>Net Profit / (Loss)</td><td style="color:var(--rd)">(£14,258)</td><td style="color:var(--ok)">£32,218</td><td style="color:var(--ok)">£86,665</td></tr>
       <tr><td>Gross Profit Ratio</td><td>12.20%</td><td>29.11%</td><td>29.11%</td></tr>
